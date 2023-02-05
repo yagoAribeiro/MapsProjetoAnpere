@@ -1,0 +1,806 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2? family = Poppins: ital, wght @ 0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 1,100; 1,200; 1,300; 1,400; 1.500; 1.600 & display = swap ');
+
+body{
+    background-color: rgb(250, 250, 250);
+}
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+}
+
+
+/*----------- HEADER -----------------*/
+.container{
+    width: 100%;
+    height: 13vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.container header{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #1616161f;
+}
+
+.container header .logo{
+    width: 50%;
+}
+
+.container header .logo img{
+    width: 140px;
+}
+
+.container header .itens{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+}
+
+.container header .itens ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container header .itens ul li{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.container header .itens ul li a{
+    display: flex;
+    text-decoration: none;
+    padding: 15px;
+
+    font-size: 15px;
+    font-weight: 400;
+    color: #161616;
+}
+
+.container header .itens ul li a:hover{
+    color: #407cee;
+    transition: 0.2s;
+}
+
+.container header .itens ul li .empresa{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+
+    font-size: 15px;
+    font-weight: 400;
+    color: #161616;
+
+    border-radius: 2px;
+    border: 1px #407cee solid;
+    
+}
+
+.container header .itens ul li .empresa:hover{
+    color: #fff;
+    background-color: #407cee;
+    transition: 0.2s;
+}
+
+
+/*----------- BANNER -----------------*/
+
+.banner{
+    height: 600px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.banner .ConteudoDoBanner{
+    width: 45%;
+    padding-left: 70px;
+    padding-top: 140px;
+    position: absolute;
+}
+
+.banner .ConteudoDoBanner .Texto1{
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.banner .ConteudoDoBanner .Texto2{
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.banner .ConteudoDoBanner button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    background-color: #305cad;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: 16px;
+}
+/*----------- BARRA DE ROLAGEM -----------------*/
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--dark);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #5423b5;
+    background-image: linear-gradient(43deg, #5423b5 32%, #5b1ebf 38%, #3318e0 100%);
+    ;
+  }
+
+  /* --------------- SEARCH BOX -----------------*/
+
+.container-two{
+    margin-top: 20px;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-two .titulo{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 1035px;
+    text-align: justify;
+}
+
+.container-two h3{
+    font-size: 20px;
+    font-weight: 500;
+    color:#161616;
+}
+
+.container-two .main{
+    width: wrap;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown{
+    width: 200px;
+    position: relative;
+}
+
+/* --------------- SELECT RAIZ -----------------*/
+
+.dropdown select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: none;
+
+    width: 105%;
+    height: 100%;
+    padding: 5px;
+
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #161616;
+}
+
+.dropdown::after{
+    content: '\25BC';
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    pointer-events: none;
+}
+
+.dropdown select:hover:before{
+    background-color:#407cee;
+}
+
+
+/*--------- CSS DO SELECT OPCIONAL ---------*/
+.dropdown-select{
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.dropdown-list{
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 110%;
+    right: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.dropdown:hover .dropdown-list{
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-list_item{
+    padding: 9px;
+    font-size: 14px;
+}
+
+.dropdown-list_item:hover{
+    background-color: #407cee;
+    color: #fff;
+    transition: 0.2s;
+}
+
+/*-------------------------------------*/
+
+.container-two .main .search-box{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin-left: 18px;
+
+    background-color: #fff;
+    padding: 5px;
+
+    align-items: center;
+}
+
+.search-box .searchbar input{
+    border: none;
+    outline: none;
+
+    width: 320px;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 5px;
+
+    border-radius: 0px;
+    border-right: 0.5px solid #16161670 ;
+}
+
+.search-box .searchbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.search-box .location input{
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    
+    width: 320px;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px;
+    
+}
+
+.search-box  .button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    
+}
+
+.search-box .button button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #407cee;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: #305cad;
+}
+
+
+/*--------------- CSS DIV DOS CARDS & CARDS --------------*/
+
+.container-tree{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.container-tree .titulo{
+    display: flex;
+    width: 1050px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.container-tree h3{
+    font-size: 20px;
+    font-weight: 500;
+    color:#161616;
+}
+
+.container-tree .main-two{
+    width: 1200px;
+    justify-content: center;
+}
+
+.main-two .card{
+    width: 20%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: 0.1s all;
+    border-radius: 1.5px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.main-two .card:hover{
+    transform: scale(1.005);
+    transition: 0.1s;
+}
+
+.main-two .card .image{
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+    background-color: #bdbdbd;
+}
+
+.main-two .card .image img{
+    width: 250px;
+}
+
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18vh;
+}
+
+.texts h3{
+    text-align: center;
+    font-weight: 500;
+    color: #161616;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.texts p{
+    margin-top: 0;
+    padding: 5px;
+    text-align: start;
+    
+    font-size: 13px;
+    border-bottom: 1px solid #1616162d;
+    color: #161616;
+    width: 85%;
+}
+
+.main-two .card .button{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-two .card .button button{
+    width: 90px;
+    height: 30px;
+    border: none;
+    background-color: #305cad;
+    color: #fff;
+    margin-left: 10px;
+   cursor: pointer;
+}
+
+.main-two .card .button button:hover{
+    background-color: #234483;
+}
+
+.container-four{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfcfc;
+    margin-top: 5%;
+    height: 80vh;
+}
+
+.container-four .main-tree{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-tree .box-cards{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 3vh;
+}
+
+.box-cards .left, .box-cards .right{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.left .item, .right .item{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    background-color: #fff;
+    height: 300px;
+    box-shadow: 0rem 0rem 4rem #b3b3b32d;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-tree .texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto h3{
+    font-size: 25px;
+    font-weight: 500;
+    color: #161616;
+    margin-bottom: 0;
+}
+
+.texto p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #305cad;
+    margin-top: 18px;
+}
+
+.item .item1-1{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.item .item1-2{
+    width: 40%;
+}
+
+.item .item1-2 img{
+    width: 280px;
+    overflow: hidden;
+    margin-left: -75px;
+}
+
+.item h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: #161616;
+    margin-bottom: 2px;
+    width: 75%;
+    text-align: justify;
+    color: #305cad;
+    margin-top: 0px;
+}
+
+.item p{
+    width: 75%;
+    font-size: 18px;
+    font-weight: 550;
+    color: #161616;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.item .p{
+    width: 75%;
+    font-size: 17px;
+    font-weight: 400;
+    color: #161616;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.item .p2{
+    width: 75%;
+    font-size: 17px;
+    font-weight: 550;
+    color: #161616;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.item .p2-2{
+    width: 75%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #161616;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-top: 0;
+}
+
+.item button{
+    width: 110px;
+    height: 35px;
+
+    border: none;
+    background-color: #305cad;
+    color: white;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.item button:hover{
+    background-color: #1d3869;
+}
+
+
+.categorias{
+    background-color: #305cad;;
+}
+
+
+.ct{
+    border-radius: 100px;
+    width: 50%;
+    height: 85%;
+    background-color: white;
+    
+}
+
+.icones{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    padding-left: 100px;
+}
+
+.ct img{
+    border-radius: 100px;
+    width: 100%;
+}
+
+.ct:hover{
+}
+
+.icones .ct2{
+    color: white;
+    align-items: center;
+    align-self: center;
+}
+
+
+ /*----------- ESTRELAS ---------*/
+
+ .rating {
+     margin-top: -28px;
+    width: 226px;
+    font-size: 25px;
+    overflow:hidden;
+}
+.rating input {
+float: right;
+opacity: 0;
+position: absolute;
+}
+.rating a,
+.rating label {
+    float:right;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+    text-decoration: none;
+}
+.rating2 {
+    direction: rtl;
+    margin-left: -105px;
+}
+.rating2 a {
+    float:none
+}
+
+
+
+.rating3 {
+    width: 226px;
+    font-size: 35px;
+    overflow:hidden;
+}
+.rating3 input {
+float: right;
+opacity: 0;
+position: absolute;
+}
+.rating3 a,
+.rating3 label {
+    float:right;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+.rating3 label:hover ~ label,
+.rating3 input:focus ~ label,
+.rating3 label:hover,
+.rating3 a:hover,
+.rating3 a:hover ~ a,
+.rating3 a:focus,
+.rating3 a:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+    text-decoration: none;
+}
+.rating4 {
+    direction: rtl;
+    margin-left: -105px;
+}
+.rating4 a {
+    float:none
+}
+
+
+/*------------- COMENTÁRIOS ------------*/
+
+.coment{
+    margin-left: 18px;
+    margin-top: 10px;
+}
+
+.coment button{
+    background: none;
+    border: none;
+    color: rgb(87, 87, 87);
+}
+
+.coment button:hover{
+    color: royalblue;
+}
+
+
+
+
+/*-----------FOOTER---------*/
+
+.container-five{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfcfc;
+    /*background: linear-gradient(90deg, rgba(84,37,170,1) 45%, rgba(11,55,213,1) 100%);
+    box-shadow: 0rem -1rem 1rem #5425aa5d;*/
+
+}
+
+footer{
+    display: flex;
+    width: 1050px;
+    height: 40vh;
+    margin-top: 82px;
+    flex-direction: column;
+    border-top: 1px solid #1616161f;
+}
+
+footer a{
+    text-decoration: none;
+    color: #000;
+}
+
+footer p{
+    color: #000;
+    font-weight: 500;
+}
+
+footer a:hover{
+    font-weight: 700;
+    color: #305cad;
+}
+
+.footer-part1{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu, .contato{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.redes{
+    width: 20%;
+}
+
+.redes img{
+    width: 52px;
+}
+
+.footer-part2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.cop{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #ede9f6;
+}
